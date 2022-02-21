@@ -17,6 +17,7 @@ public class Tester {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Eyyyy");
+        System.out.println("¿Cómo estás?");
     }
     
 }
