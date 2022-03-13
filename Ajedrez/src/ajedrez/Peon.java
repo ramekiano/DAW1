@@ -10,8 +10,8 @@ package ajedrez;
  * @author Alvaro Rame
  */
 public class Peon extends Pieza {
-    public Peon (String color){
-        super(color,"\u265F");
+    public Peon (String color, String nombre){
+        super(color,nombre);
     }
     
     @Override

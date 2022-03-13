@@ -10,8 +10,8 @@ package ajedrez;
  * @author Alvaro Rame
  */
 public class Torre extends Pieza {
-    public Torre (String color){
-        super(color,"\u265C");
+    public Torre (String color, String nombre){
+        super(color,nombre);
     }
     
     @Override

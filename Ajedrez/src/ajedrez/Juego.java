@@ -17,6 +17,6 @@ public class Juego {
     }
     public void SetTurno(){
     }
-    public Movimiento jugada(String jugada, Tablero tablero){
-    }
+    /*public Movimiento jugada(String jugada, Tablero tablero){
+    }*/
 }

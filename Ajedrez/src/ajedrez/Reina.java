@@ -10,8 +10,8 @@ package ajedrez;
  * @author Alvaro Rame
  */
 public class Reina extends Pieza {
-    public Reina (String color){
-        super(color,"\u265B");
+    public Reina (String color, String nombre){
+        super(color,nombre);
     }
     
     @Override

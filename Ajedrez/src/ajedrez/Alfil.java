@@ -10,8 +10,8 @@ package ajedrez;
  * @author Alvaro Rame
  */
 public class Alfil extends Pieza {
-    public Alfil (String color){
-        super(color,"\u265D");
+    public Alfil (String color, String nombre){
+        super(color,nombre);
     }
     
     @Override

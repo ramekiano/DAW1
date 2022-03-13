@@ -18,21 +18,6 @@ public abstract class Pieza {
         this.nombre = nombre;
     }
     public abstract boolean validoMovimiento(Movimiento mov);
-    
-    public void pintarPieza(){
-        switch(nombre){
-            case "Torre":
-                if (color.equalsIgnoreCase("negra")){
-                    System.out.print("\u2656");
-                }
-            case "Caballo":
-            case "Alfil":
-            case "Reina":
-            case "Rey":
-            case "Peon":
-                
-        }
-    }
 
     public String getNombre() {
         return nombre;
@@ -40,7 +25,7 @@ public abstract class Pieza {
     
     @Override
     public String toString() {
-        return "Pieza{" + "color=" + color + ", nombre=" + nombre + '}';
+        return "Pieza{" + nombre + color + '}';
     }
     
 }

@@ -16,9 +16,7 @@ public class Movimiento {
     public Movimiento() {
     }
 
-    public Movimiento(Posicion posInicial, Posicion posFinal) {
-        this.posInicial = posInicial;
-        this.posFinal = posFinal;
+    public Movimiento(int filaini,int colini,int filafin,int colfin) {
     }
     
     public boolean isVertical(){
