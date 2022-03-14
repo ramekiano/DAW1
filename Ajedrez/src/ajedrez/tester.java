@@ -16,6 +16,7 @@ public class tester {
 
     /**
      * @param args the command line arguments
+     * main tester donde se hacen todas las llamadas a los métodos para ejecutar el juego.
      */
     
     public static void main(String[] args) throws IOException {
@@ -29,29 +30,23 @@ public class tester {
         boolean mate = false;
         for (int i = 0; mate==false; i++) {
             tablero.pintarTablero();
-            if (i%2==0){
-                System.out.println("Mueven Blancas");
-            } else {
-                System.out.println("Mueven Negras");
-            }
-            colini=System.in.read()-65;
-            filaini= s.nextInt()-1;
-            s.nextLine();
-            colfin= System.in.read()-65;
-            filafin= s.nextInt()-1;
+            int elTurno= tablero.getTurno();
+            do{
+                tablero.elTurno(elTurno);
+                colini=System.in.read()-65;
+                filaini= s.nextInt()-1;
+                s.nextLine();
+                colfin= System.in.read()-65;
+                filafin= s.nextInt()-1;
+            }while (tablero.validarMovimiento(filaini,colini,filafin,colfin)==false);
             if(tablero.hayPieza(filafin,colfin)==true){
                 System.out.println("La "+tablero.tablero[filafin][colfin]+" ha sido comida");
-                if(tablero.tablero[filafin][colfin].getNombre()=="\u2654"){
-                    System.out.println("Jaque Mate, las negras ganan!!!");
-                    mate=true;
-                }else if (tablero.tablero[filafin][colfin].getNombre()=="\u265A"){
-                    System.out.println("Jaque Mate, las blancas ganan!!!");
-                    mate=true;
-                    }
+                mate=tablero.mate(filafin,colfin);
                 tablero.quitaPieza(filafin,colfin);
             }
             tablero.ponPieza(filaini, colini, filafin, colfin);
             tablero.quitaPieza(filaini, colini);
+            tablero.SetTurno();
         }
     }
     

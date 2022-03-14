@@ -6,7 +6,7 @@
 package ajedrez;
 
 /**
- *
+ * Clase que serviria todos los metodos que usan fila y columna, en este caso no utilizado por no querer ser redundante.
  * @author Alvaro Rame
  */
 public class Posicion {
